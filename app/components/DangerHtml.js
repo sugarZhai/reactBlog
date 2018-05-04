@@ -4,7 +4,7 @@ class DangerHtml extends Component {
     constructor() {
         super()
         this.state = {
-            content: '<h1>欢迎光临我的微博<span>+1</span></h1>'
+            content: '<h1>欢迎光临我的小店<span>+1</span></h1>'
         }
     }
 

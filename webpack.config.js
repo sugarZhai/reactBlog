@@ -26,6 +26,12 @@ module.exports = {
 
                     }
                 ]
+            }, {
+                test: /\.(jpg|png|gif|webp)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 8192
+                }
             }
         ]
     },
