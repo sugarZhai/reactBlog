@@ -1,7 +1,6 @@
 import React, { Component} from 'react';
 import { Link } from 'react-router-dom';
-import DangerHtml from './components/DangerHtml'
-import SwiperComponent  from './components/SwiperComponent'
+import {SwiperComponent,DangerHtml} from './components'
 
 class App extends Component{
     render() {
@@ -13,6 +12,7 @@ class App extends Component{
                 <div>
                     <Link to='/about'>About</Link>
                 </div>
+                <Link to='/weather'>Weather</Link>
             </div>
         )
     }

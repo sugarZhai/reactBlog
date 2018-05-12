@@ -4,7 +4,8 @@ module.exports = {
     entry: __dirname + "/index.js",
     output: {
         path: __dirname + "/public",
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath:'/images'
     },
     mode: 'none',
     module: {
@@ -26,11 +27,13 @@ module.exports = {
 
                     }
                 ]
-            }, {
+            },
+            {
                 test: /\.(jpg|png|gif|webp)$/,
                 loader: 'url-loader',
                 options: {
-                    limit: 8192
+                    limit: 8192,
+                    name:"images/[hash:8].[name].[ext]"
                 }
             }
         ]
@@ -39,7 +42,6 @@ module.exports = {
         new UglifyJsPlugin(),
     ],
     devServer: {
-        contentBase: './dist',
-        hot: true
-    } // Omitted for brevity
+        inline:true
+    },
 }

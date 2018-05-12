@@ -1,8 +1,12 @@
 import React, {Component} from 'react'
 import ReactSwipes from "react-swipes";
 import "./swiper.scss";
-const requireContext = require.context("../images", true, /^\.\/.*\.png$/);
-const images = requireContext.keys().map(requireContext);
+const BasePath='https://zhaishuangshuang292.github.io/storeImg';
+const images=[
+    BasePath+'/pic01.png',
+    BasePath+'/pic02.png',
+    BasePath+'/pic03.png',
+]
 class SwiperComponent extends Component {
     constructor() {
         super()
@@ -35,9 +39,8 @@ class SwiperComponent extends Component {
         };
         return (
             <section>
-                <h3>distance</h3>
                 <div className='testSwiper'>
-                    <img src={images[0]}/>
+                    <img src={BasePath+'/pic01.png'}/>
                 </div>
                 <div className="viewport">
                     <div className="flipsnap">

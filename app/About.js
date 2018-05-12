@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import CommentInput from './components/CommentInput'
-import CommentList from './components/CommentList'
-import './components/input.scss'
+import CommentInput from './components/commentInput/CommentInput'
+import CommentList from './components/commentInput/CommentList'
+import './components/commentInput/input.scss'
 
 class About extends Component {
     constructor() {
